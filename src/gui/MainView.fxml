@@ -2,19 +2,28 @@
 
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.VBox?>
 
-<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.MainViewController">
    <content>
       <VBox prefHeight="398.0" prefWidth="597.0">
          <children>
             <MenuBar>
               <menus>
-                <Menu mnemonicParsing="false" text="Cadastrar" />
-                <Menu mnemonicParsing="false" text="Atualizar" />
-                <Menu mnemonicParsing="false" text="Consultar" />
-                  <Menu mnemonicParsing="false" text="Sobre" />
+                <Menu mnemonicParsing="false" text="Sabres">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#onMenuItemCadastrarAction" text="Cadastrar" />
+                        <MenuItem mnemonicParsing="false" onAction="#onMenuItemAtualizarAction" text="Atualizar" />
+                        <MenuItem mnemonicParsing="false" onAction="#onMenuItemConsultarAction" text="Consultar" />
+                     </items>
+                </Menu>
+                  <Menu mnemonicParsing="false" text="Ajuda">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#onMenuItemSobreAction" text="Sobre" />
+                     </items>
+                  </Menu>
               </menus>
             </MenuBar>
          </children>
