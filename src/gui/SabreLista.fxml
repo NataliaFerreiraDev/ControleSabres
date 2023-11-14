@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefWidth="900.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.SabreListaController">
+   <children>
+       <Label text="Listagem dos Sabres">
+         <VBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </VBox.margin>
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tableViewSabres" prefHeight="400.0" prefWidth="922.0">
+        <columns>
+          <TableColumn fx:id="tableColumnId" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="tableColumnJedi" prefWidth="134.0" text="JEDI" />
+            <TableColumn fx:id="tableColumnModelo" prefWidth="73.0" text="MODELO" />
+            <TableColumn fx:id="tableColumnFabricacao" prefWidth="116.0" text="FABRICAÇÃO" />
+            <TableColumn fx:id="tableColumnSituacao" prefWidth="116.0" text="SITUAÇÃO" />
+        </columns>
+      </TableView>
+   </children>
+</VBox>

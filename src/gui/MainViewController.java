@@ -12,7 +12,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert.AlertType;
-import javafx.scene.control.Menu;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.VBox;
@@ -23,13 +22,13 @@ public class MainViewController implements Initializable {
 	private MenuItem menuItemCadastrar;
 
 	@FXML
-	private Menu menuCadastrar2;
-
-	@FXML
 	private MenuItem menuItemAtualizar;
 
 	@FXML
-	private MenuItem menuItemConsultar;
+	private MenuItem menuItemListar;
+	
+	@FXML
+	private MenuItem menuItemPesquisar;
 
 	@FXML
 	private MenuItem menuItemSobre;
@@ -40,18 +39,18 @@ public class MainViewController implements Initializable {
 	}
 
 	@FXML
-	public void onMenuCadastrar2Action() {
-		System.out.println("onMenuItemCadastrarAction2");
-	}
-
-	@FXML
 	public void onMenuItemAtualizarAction() {
 		System.out.println("onMenuItemAtualizarAction");
 	}
 
 	@FXML
-	public void onMenuItemConsultarAction() {
-		System.out.println("onMenuItemConsultarAction");
+	public void onMenuItemListarAction() {
+		loadView("/gui/SabreLista.fxml");
+	}
+	
+	@FXML
+	public void onMenuItemPesquisarAction() {
+		System.out.println("onMenuItemPesquisarAction");
 	}
 
 	@FXML
